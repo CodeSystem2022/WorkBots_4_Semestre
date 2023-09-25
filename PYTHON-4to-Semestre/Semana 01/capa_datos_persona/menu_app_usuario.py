@@ -34,5 +34,5 @@ while opcion != 5:
         usuario_eliminado = UsuarioDAO.eliminar(usuario)
         log.info(f'Usuario eliminado: {usuario_eliminado}')
 else:
-    log.info('Salimos de la aplicacion, Hasta pronto!!!')
+    log.info('Salimos de la aplicacion, Hasta pronto!!')
 
