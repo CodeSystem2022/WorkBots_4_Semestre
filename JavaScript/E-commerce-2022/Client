@@ -1,0 +1,27 @@
+const shopContent = Document.getElementById("shopContent");
+
+productos.forEach((product) =>{
+    const content = Document.createElement("div");
+    content.innerHTML = `
+    <img src="${product.img}">
+    <h3>${product.productname}</h3>
+    <p>${product.price}</p>
+    `;
+    shopContent.append(content);
+
+    const buyButton = document.createElement ("button");
+    buyButton.innerText = "Comprar";
+
+    content.append(buyButton);
+
+    buyButton.addEventListener("click",()=>{
+        Cart.push({
+            id: product.id,
+            productname: product.productname,
+            price:product.price,
+            quanty: product.quanty,
+            img: product.img,
+        })
+        console.log(cart)
+    })
+});
