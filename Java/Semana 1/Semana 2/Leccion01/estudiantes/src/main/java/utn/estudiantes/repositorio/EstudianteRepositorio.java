@@ -4,5 +4,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import utn.estudiantes.modelo.Estudiantes2022;
 
 
-public interface EstudianteRepositorio extends JpaRepository<Estudiantes2022, Integer> {
+public interface EstudiantesRepositorio extends JpaRepository<Estudiantes2022, Integer> {
 }
