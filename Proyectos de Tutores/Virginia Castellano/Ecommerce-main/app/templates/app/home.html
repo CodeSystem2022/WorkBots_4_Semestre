@@ -1,0 +1,191 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block banner_slider %}
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" >
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'app/img/portada/b1.png' %}" class="d-block w-100" alt="banner-img">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/img/portada/b2.png' %}" class="d-block w-100" alt="banner-img">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/img/portada/b3.png' %}" class="d-block w-100" alt="banner-img">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/img/portada/b4.png' %}" class="d-block w-100" alt="banner-img">
+      </div>
+    </div>
+</div>
+{% endblock banner_slider %}
+
+{% block information %}
+<div class="container">
+    <div class="row bg-danger text-center p-5 text-white border-bottom shadow">
+        <h1>Products</h1>
+        <small class=fs-5>Welcome to GUCCI, your unique destination for elegant and comfortable clothing. We understand that style and comfort go hand in hand, which is why we've curated a diverse collection of pants that will not only keep you fashionable but also feel great to wear. Whether you're looking for trendy pants for a night out or relaxed styles for a casual day, GUCCI has something for every occasion. Shop now and elevate your trendy clothing style!
+        </small>
+    </div>
+</div>
+{% endblock information %}
+
+{% block main-content %}
+    <div class="container">
+        <h2 class="text-center">Store Products<h2/>
+        <br><br>
+        {% comment %} <!-- Sección para productos de mujeres --> {% endcomment %}
+        <div class="row container">
+            {% comment %} <!-- Campera inflable --> {% endcomment %}
+            <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none">
+                <div class="goodnesssec buttermilk smbg">
+                    <a href="{% url 'category' 'MJ' %}">
+                        <div class="goodnesssec text-center">
+                            <img src="{% static 'app/img/producto/camperas-inflable.png' %}" class="img-responsive center-block img-fluid" alt="">
+                            <p class="mlkpro">Women's Jacket</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% comment %} <!-- Falda tabla --> {% endcomment %}
+            <div class="col-sm-4 col-md-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none">
+                <div class="goodnesssec buttermilk buttermilk">
+                    <a href="{% url 'category' 'MJ' %}">
+                        <div class="goodnesssec text-center">
+                            <img src="{% static 'app/img/producto/faldas-tabla.png' %}" class="img-responsive center-block img-fluid" alt="">
+                            <p class="mlkpro">Skirt with Boards</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% comment %} <!-- Pullover beige de mujer --> {% endcomment %}
+            <div class="col-sm-4 col-md-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none">
+                <div class="goodnesssec buttermilk curdbgpro">
+                    <a href="{% url 'category' 'MJ' %}">
+                        <div class="goodnesssec text-center">
+                            <img src="{% static 'app/img/producto/pullover-beige.png' %}" class="img-responsive center-block img-fluid" alt="">
+                            <p class="mlkpro">Women's Pullover</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        {% comment %} <!-- Sección para productos de hombres --> {% endcomment %}
+        <div class="row container">
+            {% comment %} <!-- Pantalón cargo --> {% endcomment %}
+            <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none">
+                <div class="goodnesssec buttermilk smbg">
+                    <a href="{% url 'category' 'HM' %}">
+                        <div class="goodnesssec text-center">
+                            <img src="{% static 'app/img/producto/pantalon-cargo.png' %}" class="img-responsive center-block img-fluid" alt="">
+                            <p class="mlkpro">Cargo Pants</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% comment %} <!-- Suéter de hombre --> {% endcomment %}
+            <div class="col-sm-4 col-md-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none">
+                <div class="goodnesssec buttermilk buttermilk">
+                    <a href="{% url 'category' 'HM' %}">
+                        <div class="goodnesssec text-center">
+                            <img src="{% static 'app/img/producto/sueter-hombre.png' %}" class="img-responsive center-block img-fluid" alt="">
+                            <p class="mlkpro">Man Sweater</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% comment %} <!-- Zapatillas sport --> {% endcomment %}
+            <div class="col-sm-4 col-md-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none">
+                <div class="goodnesssec buttermilk curdbgpro">
+                    <a href="{% url 'category' 'ZA' %}">
+                        <div class="goodnesssec text-center">
+                            <img src="{% static 'app/img/producto/zapatillas-sport.png' %}" class="img-responsive center-block img-fluid" alt="">
+                            <p class="mlkpro">Sneakers</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        {% comment %} <!-- Sección para trajes --> {% endcomment %}
+        <div class="row container">
+            {% comment %} <!-- Traje bordo --> {% endcomment %}
+            <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none">
+                <div class="goodnesssec buttermilk smbg">
+                    <a href="{% url 'category' 'TR' %}">
+                        <div class="goodnesssec text-center">
+                            <img src="{% static 'app/img/producto/traje-bordo.png' %}" class="img-responsive center-block img-fluid" alt="">
+                            <p class="mlkpro">Men's Board Suit</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% comment %} <!-- Traje gris para mujer --> {% endcomment %}
+            <div class="col-sm-4 col-md-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none">
+                <div class="goodnesssec buttermilk buttermilk">
+                    <a href="{% url 'category' 'TR' %}">
+                        <div class="goodnesssec text-center">
+                            <img src="{% static 'app/img/producto/traje-gris.png' %}" class="img-responsive center-block img-fluid" alt="">
+                            <p class="mlkpro">Gray Suit for Women</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% comment %} <!-- Traje verde musgo para hombre --> {% endcomment %}
+            <div class="col-sm-4 col-md-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none">
+                <div class="goodnesssec buttermilk curdbgpro">
+                    <a href="{% url 'category' 'TR' %}">
+                        <div class="goodnesssec text-center">
+                            <img src="{% static 'app/img/producto/traje-verde.png' %}" class="img-responsive center-block img-fluid" alt="">
+                            <p class="mlkpro">Men's Moss Green Suit</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        {% comment %} <!-- Tacos para mujeres --> {% endcomment %}
+        <div class="row container">
+            {% comment %} <!-- Tacos beige de casamiento --> {% endcomment %}
+            <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none">
+                <div class="goodnesssec buttermilk smbg">
+                    <a href="{% url 'category' 'TC' %}">
+                        <div class="goodnesssec text-center">
+                            <img src="{% static 'app/img/producto/zapatos-beige.png' %}" class="img-responsive center-block img-fluid" alt="">
+                            <p class="mlkpro">Beige Stiletto Heels</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% comment %} <!-- Tacos rojos para mujeres --> {% endcomment %}
+            <div class="col-sm-4 col-md-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none">
+                <div class="goodnesssec buttermilk buttermilk">
+                    <a href="{% url 'category' 'TC' %}">
+                        <div class="goodnesssec text-center">
+                            <img src="{% static 'app/img/producto/tacos-rojos.png' %}" class="img-responsive center-block img-fluid" alt="">
+                            <p class="mlkpro">Red High Heels</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% comment %} <!-- Tacos dorados --> {% endcomment %}
+            <div class="col-sm-4 col-md-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none">
+                <div class="goodnesssec buttermilk curdbgpro">
+                    <a href="#{% url 'category' 'TC' %}">
+                        <div class="goodnesssec text-center">
+                            <img src="{% static 'app/img/producto/tacos-dorados.png' %}" class="img-responsive center-block img-fluid" alt="">
+                            <p class="mlkpro">Golden Heel</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br/><br/>
+{% endblock main-content %}
