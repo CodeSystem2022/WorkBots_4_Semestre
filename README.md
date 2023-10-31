@@ -18,4 +18,6 @@ Scrum es un proceso en el que se aplican de manera regular un conjunto de buenas
 Estos lenguajes utilizamos
 
 <img src="https://media3.giphy.com/media/ln7z2eWriiQAllfVcn/200w.webp" width="50"><img src="https://i.giphy.com/media/LMt9638dO8dftAjtco/200.webp"   width="50">
-<img src="https://media3.giphy.com/media/kdFc8fubgS31b8DsVu/giphy.webp" width="50">
+<img src="https://media3.giphy.com/media/kdFc8fubgS31b8DsVu/giphy.webp" width="50"><img src="https://media.giphy.com/media/hO8uTzEOefFh3Yv5gm/giphy.gif" width="50">
+
+
