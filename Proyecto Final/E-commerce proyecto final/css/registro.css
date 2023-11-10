@@ -1,7 +1,7 @@
 /* Estilos para la página de registro */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    background-color: #157767;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -26,15 +26,24 @@ body {
     margin: 10px 0;
     font-weight: bold;
   }
+  .logo {
+    font-weight: 400;
+    font-size: 1.3rem;
+    text-align: left;
+    color: #fff;
+    margin-left: 40px;
+
+}
   
   #registroForm input[type="text"],
   #registroForm input[type="email"],
   #registroForm input[type="password"] {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
+    
   }
   
   #registroForm button {
