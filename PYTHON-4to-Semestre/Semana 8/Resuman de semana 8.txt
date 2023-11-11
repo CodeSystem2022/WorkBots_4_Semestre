@@ -1,0 +1,3 @@
+En esta semana no presento linux para instalar en windows y una introducción y instalacion de WSL
+
+el objetivo es que les quede funcionando la terminal de wls, Linux en windows, estas son las instalaciones requeridas para todos los que tienen windows 10, no otro. También encontrarán guía para macOS y los que tienen Linux, son los que mejor están ante esta situación, están listos para empezar.
