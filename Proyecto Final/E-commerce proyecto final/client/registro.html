@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/registro.css"> 
+</head>
+<body>
+    <br>
+    <br>
+    <h1 class="logo" style="font-size: 28px;">Workbots Sports</h1>
+    <br>
+    <br>
+    <form id="registroForm">
+        <label style="font-size: 32px;"> Registro de usuario </label>
+        <br>
+        
+        <label for="nombre">Nombre y apellido:</label>
+        <input type="text" id="nombre" required><br>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" required><br>
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" required><br>
+
+        <button type="button" id="registrar">Registrar</button>
+    </form>
+    <script>
+        document.getElementById("registrar").addEventListener("click", function() {
+            var nombre = document.getElementById("nombre").value;
+            var email = document.getElementById("email").value;
+            var contrasena = document.getElementById("contrasena").value;
+
+            // Validación del correo electrónico
+            if (!isValidEmail(email)) {
+                alert("Correo electrónico no válido");
+                return;
+            }
+
+            // Validación de contraseña
+            if (contrasena.length < 6) {
+                alert("La contraseña debe tener al menos 6 caracteres");
+                return;
+            }
+
+            // Enviar los datos al servidor para el registro
+            fetch("/registrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ nombre, email, contrasena })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert("Registro exitoso");
+                    window.location.href = "index.html"; // Redirección a index.html
+                } else {
+                    alert("Error en el registro");
+                }
+            });
+        });
+
+        // Función de validación de correo electrónico
+        function isValidEmail(email) {
+            var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            return emailRegex.test(email);
+        }
+    </script>
+</body>
+</html>

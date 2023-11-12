@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Register</title>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen py-2">
+  <div class="flex flex-col items-center justify-center w-full flex-1 px-6 md:px-20 lg:px-80 text-center">
+    <div class="flex flex-col md:flex-row bg-white rounded-2xl shadow-2xl w-full">
+      <!-- Sign in section -->
+      <div class="w-full md:w-3/5">
+        <div class="text-left font-bold">
+          <div class="mt-2 flex flex-row justify-center">
+            <!--<img src="logoKimka.png" alt="Logo" class="h-[70px] w-[70px]"> -->
+            <span class="text-green-700">WorkBots</span> Sports
+          </div>
+        </div>
+        <div class="py-0">
+          <div class="flex-1 flex flex-col items-center py-12 px-4 sm:px-2 lg:flex-none lg:px-20 xl:px-16">
+            <div class="mx auto w-full max-w-sm lg:max-w-lg lg:w-[100rem]">
+              <div class="text-center">
+                <h2 class="text-3xl font-Poiret font-bold mb-3">Crear cuenta</h2>
+              </div>
+              <div class="mt-6">
+                <form class="space-y-1" id="registroForm">
+                  <div class="px-8 grid grid-cols-1 gap-2 lg:grid-cols-2 lg:gap-3 lg:px-0">
+                    <div>
+                      <label class="font-roboto block text-sm font-medium text-gray-700">
+                        Nombre
+                      </label>
+                      <input type="text" class="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-sky-900 leading-tight focus:outline-none focus:shadow-outline" placeholder="Ingrese su Nombre" id="nombre" required>
+                    </div>
+                    <div>
+                      <label for="Last name" class="font-roboto block text-sm font-medium text-gray-700">
+                        Apellido
+                      </label>
+                      <input type="text" class="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-sky-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Ingrese su Apellido">
+                    </div>
+                    <div>
+                      <label for="Email" class="font-roboto block text-sm font-medium text-gray-700">
+                        Email
+                      </label>
+                      <input type="email" class="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-sky-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="email@example.com" id="email" required>
+                    </div>
+                    <div>
+                      <label for="password" class="font-roboto block text-sm font-medium text-gray-700">
+                        Contraseña
+                      </label>
+                      <input type="password" class="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-sky-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="password" id="contrasena" required>
+                    </div>
+                  </div>
+                </form>
+                <button type="button" class="border-2 bg-green-700 text-white rounded-full px-12 py-2 inline-block font-semibold hover:bg-green-700 hover:text-white mt-10" id="registrar">Registrate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Sign up section -->
+      <div class="w-full md:w-2/5 bg-green-700 text-white rounded-tr-2xl rounded-br-2xl py-6 md:py-36 px-12">
+        <h2 class="font-Poiret text-3xl font-bold mb-2">¿Ya tiene una cuenta?</h2>
+        <div class="border-2 w-10 border-white inline-block mb-2"></div>
+        <p class="font-Poiret mb-10">Inicie sesión con su cuenta y gestione su perfil.</p>
+        <a href="#" class="border-2 border-white rounded-full px-12 py-2 inline-block font-semibold hover:bg-white hover:text-green-700">Iniciar Sesion</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById("registrar").addEventListener("click", function() {
+        var nombre = document.getElementById("nombre").value;
+        var email = document.getElementById("email").value;
+        var contrasena = document.getElementById("contrasena").value;
+
+        // Validación del correo electrónico
+        if (!isValidEmail(email)) {
+            alert("Correo electrónico no válido");
+            return;
+        }
+
+        // Validación de contraseña
+        if (contrasena.length < 6) {
+            alert("La contraseña debe tener al menos 6 caracteres");
+            return;
+        }
+
+        // Enviar los datos al servidor para el registro
+        fetch("/registrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ nombre, email, contrasena })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert("Registro exitoso");
+                window.location.href = "index.html"; // Redirección a index.html
+            } else {
+                alert("Error en el registro");
+            }
+        });
+    });
+
+    // Función de validación de correo electrónico
+    function isValidEmail(email) {
+        var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return emailRegex.test(email);
+    }
+</script>
+</body>
+</html>
