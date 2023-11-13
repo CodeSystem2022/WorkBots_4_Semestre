@@ -2,70 +2,133 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sport</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link rel="stylesheet" href="./main.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Tu Tienda</title>
 </head>
-<body>
+<body class="bg-gray-100">
 
-    <div class="wrapper">
-        <header class="header-mobile">
-            <h1 class="logo">Sport</h1>
-            <button class="open-menu" id="open-menu">
-                <i class="bi bi-list"></i>
-            </button>
-        </header>
-        <aside>
-            <button class="close-menu" id="close-menu">
-                <i class="bi bi-x"></i>
-            </button>
-            <header>
-                <h1 class="logo" style="font-size: 28px;">Workbots Sports</h1>
-                <br>
-                <a href="/registro">
-                    <button class="registro" style="color: #157767;" href="/registro">Registro</button>
-                </a>
-
-
-            </header>
-            <nav>
-                <ul class="menu">
-                    <li>
-                        <button id="todos" class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i> Todos los productos</button>
-                    </li>
-                    <li>
-                        <button id="abrigos" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Abrigos</button>
-                    </li>
-                    <li>
-                        <button id="camisetas" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Camisetas</button>
-                    </li>
-                    <li>
-                        <button id="pantalones" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Pantalones</button>
-                    </li>
-                    <li>
-                        <a class="boton-menu boton-carrito" href="/carrito">
-                            <i class="bi bi-cart-fill"></i> Carrito <span id="numerito" class="numerito">0</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <footer>
-                <p class="texto-footer">© 2023 Workbots</p>
-            </footer>
-        </aside>
-        <main>
-            <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
-            <div id="contenedor-productos" class="contenedor-productos">
-                <!-- Esto se va a rellenar con JS -->
+    <!-- Navbar -->
+    <nav class="bg-green-700 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-white font-bold text-lg">Workbots Sports</a>
+            <div class="space-x-4">
+                <a href="/shop" class="text-white">Shop</a>
+                <a class="text-white" id="contact">Contacto</a>
+                <a href="#" class="text-white">Cuenta</a>
             </div>
-        </main>
+        </div>
+    </nav>
+
+    <!-- Portada -->
+    <section class="py-12">
+        <div class="container mx-auto">
+            <img src="img/img4.png" alt="Portada" class="w-full h-1/4 rounded-lg">
+        </div>
+    </section>
+
+    <!-- Productos más vendidos -->
+    <section class="py-8">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold mb-4">Productos más vendidos</h2>
+        <!-- Fila con 4 columnas para productos -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Producto 1 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                
+            <!-- Imagen del producto -->
+            <img src="img/abrigos/01.jpg" alt="Producto 1" class="w-full h-32 object-cover mb-4 rounded-md">
+
+            <!-- Información del producto -->
+            <div class="flex flex-col">
+                <!-- Precio del producto -->
+                <span class="text-lg font-bold mb-2">$25.000</span>
+
+                <!-- Etiqueta de descuento (opcional) -->
+                <span class="text-green-500 font-bold mb-2">-10% Descuento</span>
+
+                <!-- Botón de agregar al carrito -->
+                <button class="bg-green-700 text-white px-4 py-2 rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:border-green-300">
+                    Agregar al Carrito
+                </button>
+            </div>
+
+        </div>
+
+            <!-- Producto 2 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <!-- Imagen del producto -->
+            <img src="img/abrigos/01.jpg" alt="Producto 1" class="w-full h-32 object-cover mb-4 rounded-md">
+
+                <!-- Información del producto -->
+            <div class="flex flex-col">
+                <!-- Precio del producto -->
+                <span class="text-lg font-bold mb-2">$6.000</span>
+
+                <!-- Etiqueta de descuento (opcional) -->
+                <span class="text-green-500 font-bold mb-2">-10% Descuento</span>
+
+                <!-- Botón de agregar al carrito -->
+                <button class="bg-green-700 text-white px-4 py-2 rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:border-green-300">
+                    Agregar al Carrito
+                </button>
+            </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <!-- Imagen del producto -->
+            <img src="img/abrigos/01.jpg" alt="Producto 1" class="w-full h-32 object-cover mb-4 rounded-md">
+                <!-- Información del producto -->
+            <div class="flex flex-col">
+                <!-- Precio del producto -->
+                <span class="text-lg font-bold mb-2">$39.999</span>
+
+                <!-- Etiqueta de descuento (opcional) -->
+                <span class="text-green-500 font-bold mb-2">-10% Descuento</span>
+
+                <!-- Botón de agregar al carrito -->
+                <button class="bg-green-700 text-white px-4 py-2 rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:border-green-300">
+                    Agregar al Carrito
+                </button>
+            </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <!-- Imagen del producto -->
+            <img src="img/abrigos/01.jpg" alt="Producto 1" class="w-full h-32 object-cover mb-4 rounded-md">
+                <!-- Información del producto -->
+            <div class="flex flex-col">
+                <!-- Precio del producto -->
+                <span class="text-lg font-bold mb-2">$24.999</span>
+
+                <!-- Etiqueta de descuento (opcional) -->
+                <span class="text-green-500 font-bold mb-2">-10% Descuento</span>
+
+                <!-- Botón de agregar al carrito -->
+                <button class="bg-green-700 text-white px-4 py-2 rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:border-green-300">
+                    Agregar al Carrito
+                </button>
+            </div>
+            </div>
+        </div>
     </div>
-    
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/menu.js"></script>
+</section>
+
+
+    <!-- Pie de página -->
+    <footer class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 Workbots Sports. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script>
+                // Agrega el evento clic al enlace de "contacto"
+                document.getElementById("contact").addEventListener("click", function() {
+        // Redirección al archivo contacto.ejs
+        window.location.href = "/contacto"; // Ajusta la ruta según sea necesario
+        });
+    </script>
 </body>
 </html>

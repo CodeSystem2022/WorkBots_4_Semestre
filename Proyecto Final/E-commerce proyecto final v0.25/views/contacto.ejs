@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-green-700 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-white font-bold text-lg">Workbots Sports</a>
+            <div class="space-x-4">
+                <a href="/shop" class="text-white">Shop</a>
+                <a class="text-white" id="contact">Contacto</a>
+                <a href="#" class="text-white">Cuenta</a>
+            </div>
+        </div>
+    </nav>
+    <div id="contact" class="flex w-full min-h-screen justify-center items-center p-8 md:p-0">
+        <div class="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 bg-green-700 w-full max-w-4xl p-8 sm:p-12 rounded-xl shadow-lg text-black overflow-hidden">
+            <div class="flex flex-col justify-between gap-4 md:justify-start md:gap-8">
+                <div class="flex flex-col md:gap-6">
+                    <h1 class="font-bold text-4xl tracking-wide">
+                        Contacto
+                    </h1>
+                    <p class="pt-2 text-cyan-100 text-sm"> 
+                        Formulario de consulta. No dude en ponerse en contacto con nosotros
+                    </p>
+                </div>
+                <div class="flex flex-col">
+                    <div class="inline-flex space-x-2 items-center">
+                        <ion-icon name="call" class="text-teal-400 text-xl"></ion-icon>
+                        <span>+(54) 11-2345-6789</span>
+                    </div>
+                </div>
+                <div class="inline-flex space-x-2 items-center">
+                    <ion-icon name="mail" class="text-teal-400 text-xl"></ion-icon>
+                    <span>workbotsport@gmail.com</span>
+                </div>
+                <div class="inline-flex space-x-2 items-center">
+                    <ion-icon name="location" class="text-teal-400 text-xl"></ion-icon>
+                    <span>Buenos Aires, Argentina</span>
+                </div>
+                <div class="flex space-x-4 text-lg">
+                    <a href="#">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-tiktok"></ion-icon>
+                    </a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute w-40 h-40 bg-teal-400 rounded-full -right-28 -top-28"></div>
+                <div class="absolute w-40 h-40 bg-teal-400 rounded-full -left-28 -bottom-28"></div>
+                <div class="relative a-10 bg-black rounded-xl shadow-lg p-8 text-gray-600 md:w-80">
+                    <form action="" class="flex flex-col space-y-4">
+                        <div>
+                            <label for="" class="text-sm text-teal-400">Nombre Completo</label>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="First and last name" class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
+                        </div>
+                        <div>
+                            <label for="" class="text-sm text-teal-400">Mail</label>
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Email Address" class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
+                        </div>
+                        <div>
+                            <label for="" class="text-sm text-teal-400">Mensaje</label>
+                        </div>
+                        <div>
+                            <textarea placeholder="Description" rows="4" class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-teal-300"></textarea>
+                        </div>
+                        <button class="inline-block self-end bg-green-700 text-white font-bold rounded-lg px-6 py-2 uppercase text-sm">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

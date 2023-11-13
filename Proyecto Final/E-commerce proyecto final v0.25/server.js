@@ -44,8 +44,13 @@ app.get('/login', (req, res) => {
     res.render("login");
 });
 
+app.get('/shop', (req, res) => {
+    res.render("shop");
+});
 
-
+app.get('/contacto', (req, res) => {
+    res.render("contacto");
+});
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));

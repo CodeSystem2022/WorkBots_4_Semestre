@@ -11,10 +11,10 @@
     <!-- Navbar -->
     <nav class="bg-green-700 p-4">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-white font-bold text-lg">Workbots Sports</a>
+            <a href="/" class="text-white font-bold text-lg">Workbots Sports</a>
             <div class="space-x-4">
-                <a href="#" class="text-white">Shop</a>
-                <a href="#" class="text-white">Contacto</a>
+                <a class="text-white" id="shopp">Shop</a>
+                <a class="text-white" id="contact">Contacto</a>
                 <a href="#" class="text-white">Cuenta</a>
             </div>
         </div>
@@ -123,6 +123,18 @@
             <p>&copy; 2023 Workbots Sports. Todos los derechos reservados.</p>
         </div>
     </footer>
+<script>
+    // Agrega el evento clic al enlace de "Shop"
+    document.getElementById("shopp").addEventListener("click", function() {
+        // Redirección al archivo Shop.ejs
+        window.location.href = "/shop"; // Ajusta la ruta según sea necesario
+    });
 
+        // Agrega el evento clic al enlace de "contacto"
+        document.getElementById("contact").addEventListener("click", function() {
+        // Redirección al archivo Shop.ejs
+        window.location.href = "/contacto"; // Ajusta la ruta según sea necesario
+        });
+</script>
 </body>
 </html>
