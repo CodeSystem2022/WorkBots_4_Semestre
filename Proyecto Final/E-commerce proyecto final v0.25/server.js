@@ -40,6 +40,9 @@ app.get('/registro', (req, res) => {
     res.render("registro");
 });
 
+app.get('/login', (req, res) => {
+    res.render("login");
+});
 
 
 
@@ -82,7 +85,7 @@ app.post('/registrar', (req, res) => {
             throw err;
         }
         console.log("Usuario registrado");
-        res.redirect('/');
+        res.redirect('/index');
     });
 });
 
