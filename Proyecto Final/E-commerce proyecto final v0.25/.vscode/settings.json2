@@ -1,11 +1,11 @@
 {
     "mysql": {
       "host": "3306",
-      "user": "Titim19",
-      "password": "Cata1425",
-      "database": "Registrousuariosnuevos"
+      "user": "root",
+      "password": "admin",
+      "database": "registro"
     },
     "server": {
       "port": 3306
     }
-  }
+}
