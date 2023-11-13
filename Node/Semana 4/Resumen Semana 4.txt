@@ -1,0 +1,3 @@
+En esta clase el profe nos brindo teoria para profundizar sobreo NodeJS
+
+vimos sobre EventLoop
