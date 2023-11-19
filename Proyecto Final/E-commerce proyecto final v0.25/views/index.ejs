@@ -2,70 +2,221 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sport</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link rel="stylesheet" href="./main.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Tu Tienda</title>
 </head>
-<body>
+<body class="bg-gray-100">
 
-    <div class="wrapper">
-        <header class="header-mobile">
-            <h1 class="logo">Sport</h1>
-            <button class="open-menu" id="open-menu">
-                <i class="bi bi-list"></i>
-            </button>
-        </header>
-        <aside>
-            <button class="close-menu" id="close-menu">
-                <i class="bi bi-x"></i>
-            </button>
-            <header>
-                <h1 class="logo" style="font-size: 28px;">Workbots Sports</h1>
-                <br>
-                <a href="/registro">
-                    <button class="registro" style="color: #157767;" href="/registro">Registro</button>
-                </a>
-
-
-            </header>
-            <nav>
-                <ul class="menu">
-                    <li>
-                        <button id="todos" class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i> Todos los productos</button>
-                    </li>
-                    <li>
-                        <button id="abrigos" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Abrigos</button>
-                    </li>
-                    <li>
-                        <button id="camisetas" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Camisetas</button>
-                    </li>
-                    <li>
-                        <button id="pantalones" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Pantalones</button>
-                    </li>
-                    <li>
-                        <a class="boton-menu boton-carrito" href="/carrito">
-                            <i class="bi bi-cart-fill"></i> Carrito <span id="numerito" class="numerito">0</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <footer>
-                <p class="texto-footer">© 2023 Workbots</p>
-            </footer>
-        </aside>
-        <main>
-            <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
-            <div id="contenedor-productos" class="contenedor-productos">
-                <!-- Esto se va a rellenar con JS -->
+    <!-- Navbar -->
+    <nav class="bg-green-700 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-white font-bold text-lg">Workbots Sports</a>
+            <div class="space-x-4">
+                <a href="/shop" class="text-white">Shop</a>
             </div>
-        </main>
-    </div>
+        </div>
+    </nav>
+
+    <!-- Portada -->
+    <section class="py-12">
+        <div class="container mx-auto">
+            <img src="img/img4.jpg" alt="Portada" class="w-full h-1/4 rounded-lg">
+        </div>
+    </section>
+
+    <!-- Productos más vendidos -->
+    <section class="py-8">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold mb-4">Productos más vendidos</h2>
+        <!-- Fila con 4 columnas para productos -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Producto 1 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                
+            <!-- Imagen del producto -->
+            <img src="img/camisetas/01.jpg" alt="Producto 1" class="w-full h-32 object-cover mb-4 rounded-md">
+
+            <!-- Información del producto -->
+            <div class="flex flex-col">
+                <!-- Precio del producto -->
+                <span class="text-lg font-bold mb-2">$25.000</span>
+
+                <!-- Etiqueta de descuento (opcional) -->
+                <span class="text-green-500 font-bold mb-2">-10% Descuento</span>
+
+                <!-- Botón de agregar al carrito -->
+                <button class="bg-green-700 text-white px-4 py-2 rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:border-green-300">
+                    Agregar al Carrito
+                </button>
+            </div>
+
+        </div>
+
+            <!-- Producto 2 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <!-- Imagen del producto -->
+            <img src="img/abrigos/01.jpg" alt="Producto 1" class="w-full h-32 object-cover mb-4 rounded-md">
+
+                <!-- Información del producto -->
+            <div class="flex flex-col">
+                <!-- Precio del producto -->
+                <span class="text-lg font-bold mb-2">$39.999</span>
+
+                <!-- Etiqueta de descuento (opcional) -->
+                <span class="text-green-500 font-bold mb-2">-10% Descuento</span>
+
+                <!-- Botón de agregar al carrito -->
+                <button class="bg-green-700 text-white px-4 py-2 rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:border-green-300">
+                    Agregar al Carrito
+                </button>
+            </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <!-- Imagen del producto -->
+            <img src="img/pantalones/03.jpg" alt="Producto 1" class="w-full h-32 object-cover mb-4 rounded-md">
+                <!-- Información del producto -->
+            <div class="flex flex-col">
+                <!-- Precio del producto -->
+                <span class="text-lg font-bold mb-2">$16.000</span>
+
+                <!-- Etiqueta de descuento (opcional) -->
+                <span class="text-green-500 font-bold mb-2">-10% Descuento</span>
+
+                <!-- Botón de agregar al carrito -->
+                <button class="bg-green-700 text-white px-4 py-2 rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:border-green-300">
+                    Agregar al Carrito
+                </button>
+            </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <!-- Imagen del producto -->
+            <img src="img/abrigos/04.jpg" alt="Producto 1" class="w-full h-32 object-cover mb-4 rounded-md">
+                <!-- Información del producto -->
+            <div class="flex flex-col">
+                <!-- Precio del producto -->
+                <span class="text-lg font-bold mb-2">$24.999</span>
+
+                <!-- Etiqueta de descuento (opcional) -->
+                <span class="text-green-500 font-bold mb-2">-10% Descuento</span>
+
+                <!-- Botón de agregar al carrito -->
+                <button class="bg-green-700 text-white px-4 py-2 rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:border-green-300">
+                    Agregar al Carrito
+                </button>
+            </div>
+            </div>
+        </div>
+
+        <!-- Agregamos seccion contacto-->
+
+        <div class="flex w-full min-h-screen justify-center items-center p-8 md:p-0">
+            <div class="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 bg-green-700 w-full max-w-4xl p-8 sm:p-12 rounded-xl shadow-lg text-black overflow-hidden">
+                <div class="flex flex-col justify-between gap-4 md:justify-start md:gap-8">
+                    <div class="flex flex-col md:gap-6">
+                        <h1 class="font-bold text-4xl tracking-wide">
+                            Contacto
+                        </h1>
+                        <p class="pt-2 text-cyan-100 text-sm"> 
+                            Formulario de consulta. No dude en ponerse en contacto con nosotros
+                        </p>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="inline-flex space-x-2 items-center">
+                            <ion-icon name="call" class="text-teal-400 text-xl"></ion-icon>
+                            <span>+(54) 11-2345-6789</span>
+                        </div>
+                    </div>
+                    <div class="inline-flex space-x-2 items-center">
+                        <ion-icon name="mail" class="text-teal-400 text-xl"></ion-icon>
+                        <span>workbotsport@gmail.com</span>
+                    </div>
+                    <div class="inline-flex space-x-2 items-center">
+                        <ion-icon name="location" class="text-teal-400 text-xl"></ion-icon>
+                        <span>Buenos Aires, Argentina</span>
+                    </div>
+                    <div class="flex space-x-4 text-lg">
+                        <a href="#">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                        <a href="#">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                        <a href="#">
+                            <ion-icon name="logo-tiktok"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute w-40 h-40 bg-teal-400 rounded-full -right-28 -top-28"></div>
+                    <div class="absolute w-40 h-40 bg-teal-400 rounded-full -left-28 -bottom-28"></div>
+                    <div class="relative a-10 bg-black rounded-xl shadow-lg p-8 text-gray-600 md:w-80">
+                        <form action="" class="flex flex-col space-y-4">
+                            <div>
+                                <label for="" class="text-sm text-teal-400">Nombre Completo</label>
+                            </div>
+                            <div>
+                                <input type="text" placeholder="First and last name" class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
+                            </div>
+                            <div>
+                                <label for="" class="text-sm text-teal-400">Mail</label>
+                            </div>
+                            <div>
+                                <input type="email" placeholder="Email Address" class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300">
+                            </div>
+                            <div>
+                                <label for="" class="text-sm text-teal-400">Mensaje</label>
+                            </div>
+                            <div>
+                                <textarea placeholder="Description" rows="4" class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-teal-300"></textarea>
+                            </div>
+                            <button class="inline-block self-end bg-green-700 text-white font-bold rounded-lg px-6 py-2 uppercase text-sm">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/menu.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+
+    </div>
+</section>
+
+
+    <!-- Pie de página -->
+    <footer class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 Workbots Sports. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script>
+                // Agrega el evento clic al enlace de "contacto"
+                document.getElementById("contact").addEventListener("click", function() {
+        // Redirección al archivo contacto.ejs
+        window.location.href = "/contacto"; // Ajusta la ruta según sea necesario
+        });
+
+         // Supongamos que isLoggedIn es una variable que indica si el usuario está registrado
+    var isLoggedIn = true; // Reemplaza con tu lógica real de verificación
+
+// Si el usuario no está registrado, redirigir a la página de registro
+if (!isLoggedIn) {
+  window.location.href = "registro.ejs";
+} else {
+  // Obtener el nombre de usuario (reemplaza 'nombreUsuario' con la lógica real para obtener el nombre del usuario)
+  var nombreUsuario = "Damian"; 
+
+  // Mostrar el saludo y el nombre de usuario
+  var welcomeContainer = document.getElementById("welcome-container");
+  welcomeContainer.innerHTML = "<p>Bienvenido, " + nombreUsuario + "!</p>";
+}
+
+    </script>
 </body>
 </html>

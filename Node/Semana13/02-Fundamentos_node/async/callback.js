@@ -1,25 +1,28 @@
-function hola(nombre, miCallback){
-    setTimeout( function() {
-        console.log('Hola ' + nombre);
+//En la terminal nos ubicamos en la carpeta async y digitamos: nodemon callback.js
+
+function hola(nombre, miCallback){// Le pasamos el parametro como funcion
+    setTimeout(function () { 
+        console.log('Hola '+nombre);
         miCallback(nombre);
-    }, 1000);
+    },1000); // 1000 ms
+    
 }
+           
 
-//Función asincrona - adios
-function adios(nombre, otrocallback) {
-    setTimeout(function(){
-        console.log('Adiós '+ nombre);
-        otrocallback();
-    }, 1500);   
+function adios(nombre, otroCallback){
+    setTimeout(function () {
+        console.log('Adios '+nombre);
+        otroCallback();
+    },1500);
 }
+console.log('Iniciando el proceso...');
+hola('carlos', function(nombre) {
+   adios(nombre, function(){
+       console.log('Terminando el proceso...');
 
-console.log('Iniciando el proceo...');
-
-hola('Carlos', function(nombre) {
-    adios(nombre, function(){
-        console.log('Terminando el proceso...');    
-    });
+    })
 });
-
-//hola('Carlos', function(){});
+//hola('carlos', function(){});
 //adios('Carlos', function(){});
+
+ 

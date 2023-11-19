@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Login</title>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen py-2">
+  <!-- Navbar -->
+  <nav class="bg-green-700 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="/shop" class="text-white font-bold text-lg">Shop</a>
+    </div>
+  </nav>
+  <div class="flex flex-col items-center justify-center w-full flex-1 px-2 md:px-20 text-center">
+    <div class="flex flex-col md:flex-row bg-white rounded-2xl shadow-2xl w-full">
+      <!-- Seccion Iniciar sesión -->
+      <div class="w-full md:w-3/5">
+        <div class="text-left font-bold">
+          <span class="text-green-700">WorkBots</span> Sports
+        </div>
+        <div class="py-4 md:py-10">
+          <h2 class="text-3xl font-bond text-green-700">Acceder a la cuenta</h2>
+          <div class="border-2 w-10 border-gretext-green-700 inline-block mb-2"></div>
+          <div class="flex justify-center my-2">
+            <a href="#" class="border-2 border-gray-200 rounded-full p-3 mx-1">
+              <!-- Componente icono Facebook -->
+              <span class="text-sm">Facebook</span>
+            </a>
+            <a href="#" class="border-2 border-gray-200 rounded-full p-3 mx-1">
+              <!-- Componente icono linkedin -->
+              <span class="text-sm">LinkedIn</span>
+            </a>
+            <a href="#" class="border-2 border-gray-200 rounded-full p-3 mx-1">
+              <!-- Componente icono google -->
+              <span class="text-sm">Google</span>
+            </a>
+          </div> <!-- Sección de inicio de sesión con redes sociales -->
+          <p class="text-gray-400 my-3">O utiliza tu cuenta de correo electrónico</p>
+          <div class="flex flex-col items-center">
+            <div class="bg-gray-100 w-64 p-2 flex items-center mb-3">
+              <!-- Componente icono -->
+              <span class="text-gray-400 m-2">✉️</span>
+              <input type="email" name="email" placeholder="email" class="bg-gray-100 outline-none text-sm flex-1">
+            </div>
+            <div class="bg-gray-100 w-64 p-2 flex items-center mb-3">
+              <!-- Componente icono -->
+              <span class="text-gray-400 m-2">🔒</span>
+              <input type="password" name="password" placeholder="password" class="bg-gray-100 outline-none text-sm flex-1">
+            </div>
+            <div class="flex justify-between w-64 mb-5">
+              <label class="flex items-center text-xs"><input type="checkbox" name="remember" class="mr-1">Recuérdame </label>
+              <a href="#" class="text-xs">¿Ha olvidado su contraseña?</a>
+            </div>
+            <a href="#" class="border-2 bg-green-700 text-white rounded-full px-12 py-2 inline-block font-semibold hover:bg-gretext-green-700 hover:text-white" id="loginButton">Iniciar sesión</a>
+          </div>
+        </div>
+      </div>
+      <!-- Sección de inscripción -->
+      <div class="w-full md:w-2/5 bg-green-700 text-white rounded-tr-2xl rounded-br-2xl py-6 md:py-36 px-12">
+        <h2 class="font-Poiret text-3xl font-bold mb-2"> Bienvenido a WorkBots Sports</h2>
+        <div class="border-2 w-10 border-white inline-block mb-2"></div>
+        <p class="font-Poiret mb-10"> Rellene sus datos personales y comience su moda con nosotros.</p>
+        <a href="#" class="border-2 border-white rounded-full px-12 py-2 inline-block font-semibold hover:bg-white hover:text-green-700" id="Registrarse">Regístrese</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Agrega el evento clic al enlace de "Registrarse"
+    document.getElementById("Registrarse").addEventListener("click", function() {
+        // Redirección al archivo registro.ejs
+        window.location.href = "/registro"; // Ajusta la ruta según sea necesario
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+    // Agrega el evento clic al botón de "Iniciar sesión"
+    document.getElementById("loginButton").addEventListener("click", function() {
+      // Obtén los valores de correo y contraseña
+      const email = document.getElementsByName("email")[0].value;
+      const password = document.getElementsByName("password")[0].value;
+
+      // Realiza la petición al servidor para verificar las credenciales
+      fetch('/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+          password: password,
+        }),
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Credenciales incorrectas. Por favor, inténtelo nuevamente.');
+        }
+        // Redirecciona al index.ejs
+        window.location.href = "/index"; // Ajusta la ruta según sea necesario
+      })
+      .catch(error => {
+        // Muestra un mensaje de error
+        alert(error.message);
+      });
+    });
+  });
+
+  // Agrega el evento clic al enlace de "Registrarse"
+  document.getElementById("Registrarse").addEventListener("click", function() {
+    // Redirección al archivo registro.ejs
+    window.location.href = "/registro"; // Ajusta la ruta según sea necesario
+  });
+
+
+  </script>
+</body>
+</html>

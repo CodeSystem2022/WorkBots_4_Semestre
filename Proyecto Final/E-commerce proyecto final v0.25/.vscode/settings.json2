@@ -3,7 +3,7 @@
       "host": "3306",
       "user": "root",
       "password": "admin",
-      "database": "registro"
+      "database": "usuarios"
     },
     "server": {
       "port": 3306
