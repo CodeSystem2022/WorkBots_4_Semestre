@@ -1,0 +1,138 @@
+body {
+  background-color: rgb(32, 95, 83);
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+nav {
+  /*background-color: rgb(32, 95, 83);*/
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(63, 38, 1);
+  padding: 15px;
+}
+nav p {
+  font-size: 1.5;
+  padding-left: 30px;
+}
+nav .icons {
+  display: flex;
+  gap: 15px;
+}
+nav .icons button {
+  background: none;
+  border-style: none;
+}
+
+main {
+  background-color: rgb(32, 95, 83);
+}
+
+footer {
+  /*variable local del footer*/
+  background-color: orange;
+  width: 100%;
+  height: 250px;
+}
+
+article {
+  width: auto;
+  color: rgb(63, 38, 1);
+  display: flex;
+  justify-content: space-around;
+}
+article .info-section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  gap: 25px;
+}
+article h1 {
+  font-size: 3em;
+  padding: 0px;
+  margin: 0px;
+}
+article p {
+  font-size: 1, 5em;
+}
+article button {
+  width: 12vw;
+  padding: 20px;
+  background-color: orange;
+  background: none;
+  border-style: none;
+  border-radius: 35px;
+  color: white font-size 1em;
+}
+article img {
+  width: 25vw;
+  border-radius: 19px;
+}
+article .image-section {
+  width: 50%;
+  
+}
+
+section {
+  width: auto;
+  height: auto;
+  background-color: rgb(154, 226, 177);
+  padding: 60px;
+}
+section h2 {
+  color: rgb(63, 38, 1);
+  font-size: 2em;
+}
+section .section1 h2, section .section2 h2 {
+  font-weight: 300;
+  padding-bottom: 60px;
+}
+section .section1 .product-cart, section .section2 .product-cart {
+  width: 12vw;
+  height: auto;
+  background-color: rgb(224, 124, 31);
+  color: rgb(63, 38, 1);
+  padding: 20px;
+  border-radius: 8px;
+}
+section .section1 .product-cart img, section .section2 .product-cart img {
+  width: 200px;
+  height: 250px;
+  background-image: cover;
+  border-radius: 6px;
+}
+section .cart-section1 {
+  display: flex;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  column-gap: 200px;
+  row-gap: 200px;
+}
+section .cart-section1 .product-card {
+  width: 14vw;
+  height: 45vh;
+  background-color: rgb(224, 124, 31);
+  color: rgb(63, 38, 1);
+  padding: 20px;
+  border-radius: 8px;
+}
+section .cart-section1 .product-card .icons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 12px;
+}
+section .cart-section1 .product-card .icons svg {
+  width: 28px;
+  height: 28px;
+  stroke: olive;
+  stroke-width: yellow;
+}
+section .section2 .product-cart {
+  background-color: rgb(226, 226, 154);
+  color: rgb(37, 51, 12);
+}/*# sourceMappingURL=main.css.map */
